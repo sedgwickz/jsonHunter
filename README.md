@@ -2,7 +2,7 @@
 
 在线爬虫
 
-网址：[https://jsonhunter.sedgwickz.vercel.app/](https://jsonhunter.sedgwickz.vercel.app/)
+网址：[https://jsonhunter.vercel.app/](https://jsonhunter.vercel.app/)
 
 ## License
 
