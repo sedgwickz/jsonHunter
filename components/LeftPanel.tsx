@@ -1,9 +1,19 @@
-import React, { useRef, useState } from 'react'
+import React, { Dispatch, SetStateAction, useRef, useState } from 'react'
 const preDefinedStruct = `Demo JSON: \n[{
 name: '.topic-link',
 attrs: ['href']
 }]
 `
+
+interface Props {
+    selectors: string
+    setSelectors: Dispatch<SetStateAction<string>>
+    url: string
+    setUrl: Dispatch<SetStateAction<string>>
+    setResult: Dispatch<SetStateAction<string>>
+    handleCurl: () => void
+}
+
 const LeftPanel = ({
     selectors,
     setSelectors,
@@ -11,7 +21,7 @@ const LeftPanel = ({
     setUrl,
     setResult,
     handleCurl
-}) => {
+}: Props) => {
     const textareaRef = useRef<HTMLTextAreaElement>(null)
     const urlRef = useRef<HTMLInputElement>(null)
     const [errMsg, setErrMsg] = useState('')

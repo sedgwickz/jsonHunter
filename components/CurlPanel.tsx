@@ -1,6 +1,14 @@
 import React from 'react'
 
-const CurlPanel = ({ url, selectors, curlCmd }) => {
+const CurlPanel = ({
+    url,
+    selectors,
+    curlCmd
+}: {
+    url: string
+    selectors: string
+    curlCmd: string
+}) => {
     return (
         <div>
             {curlCmd && (

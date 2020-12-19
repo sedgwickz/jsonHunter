@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react'
 import CurlPanel from '../components/CurlPanel'
-import Footer from '../components/footer'
+import Footer from '../components/Footer'
 import Intro from '../components/Intro'
 import LeftPanel from '../components/LeftPanel'
 import RightPanel from '../components/RightPanel'
-export default function Home() {
+
+function Home() {
     const [url, setUrl] = useState('')
     const [selectors, setSelectors] = useState('')
     const [result, setResult] = useState('')
@@ -50,3 +51,5 @@ export default function Home() {
         </div>
     )
 }
+
+export default Home
