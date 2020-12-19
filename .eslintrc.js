@@ -21,13 +21,13 @@ module.exports = {
         SharedArrayBuffer: 'readonly'
     },
     parser: '@typescript-eslint/parser',
-    parserOptions: {
-        ecmaFeatures: {
-            jsx: true
-        },
-        ecmaVersion: 2018,
-        sourceType: 'module'
-    },
+    // parserOptions: {
+    //     ecmaFeatures: {
+    //         jsx: true
+    //     },
+    //     ecmaVersion: 2018,
+    //     sourceType: 'module'
+    // },
     rules: {
         'linebreak-style': 'off',
         'prettier/prettier': [

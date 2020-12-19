@@ -8,6 +8,10 @@
         @apply font-mono bg-brew-default h-full w-full;
     }
 
+    a {
+        @apply inline-block;
+    }
+
     button {
         @apply rounded bg-white text-sm px-1 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50;
     }
@@ -18,5 +22,13 @@
 
     textarea {
         @apply w-auto h-full rounded p-1 resize-none focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
+    }
+
+    figure {
+        @apply bg-brew-code rounded p-4;
+    }
+
+    pre {
+        @apply break-words whitespace-pre-wrap;
     }
 }
