@@ -1,16 +1,22 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@layer base {
+    html,
+    body {
+        @apply font-mono bg-brew-default h-full w-full;
+    }
 
-* {
-  box-sizing: border-box;
+    button {
+        @apply rounded bg-white text-sm px-1 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50;
+    }
+
+    input[type='text'] {
+        @apply rounded focus:outline-none p-1 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
+    }
+
+    textarea {
+        @apply w-auto h-full rounded p-1 resize-none focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
+    }
 }
