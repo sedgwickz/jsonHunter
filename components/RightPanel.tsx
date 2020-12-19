@@ -3,10 +3,10 @@ import React from 'react'
 const RightPanel = ({ result, url }) => {
     return (
         <>
-            <figure className='hidden md:block p-2 rounded text-white border-2 border-solid border-brew-primary overflow-scroll'>
+            <figure className='min-h-100px mt-4 md:mt-0 flex-auto p-2 rounded text-white border-2 border-solid border-brew-primary overflow-scroll'>
                 <pre>{result}</pre>
             </figure>
-            <div className='hidden md:flex justify-end space-x-2'>
+            <div className='flex justify-end space-x-2'>
                 <button
                     onClick={() => {
                         if (!result) {
@@ -14,8 +14,8 @@ const RightPanel = ({ result, url }) => {
                             return
                         }
                         const element = document.createElement('a')
-                        const file = new Blob([result], {
-                            type: 'text/json'
+                        const file = new Blob(['\ufeff' + result], {
+                            type: 'text/plain;charset=UTF-8'
                         })
                         element.href = URL.createObjectURL(file)
                         window.open(element.href, '_blank')

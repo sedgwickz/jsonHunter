@@ -2,10 +2,11 @@ import Link from 'next/link'
 import React from 'react'
 const Logo = () => {
     return (
-        <div className='flex items-end text-brew-primary'>
+        <div className='text-center text-brew-primary mb-4'>
             <Link href='/'>
                 <a title='jsonHunter'>
-                    <div className='flex items-center'>
+                    <img src='/assets/logo.png' alt='jsonhunter' />
+                    {/* <div className='flex items-center'>
                         <svg
                             className='fill-current w-20 md:w-28 inline'
                             viewBox='0 0 38 24'
@@ -19,10 +20,11 @@ const Logo = () => {
                         <span className='font-extrabold text-3xl md:text-5xl'>
                             jsonHunter
                         </span>
-                    </div>
+                    </div> */}
                 </a>
             </Link>
             <div>在线爬虫</div>
+            <div>Make JSON Scrape Simpler</div>
         </div>
     )
 }

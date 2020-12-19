@@ -7,7 +7,7 @@ const Footer = () => {
             style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}
         >
             <div className='flex-initial'>
-                <span>有用的网址：</span>
+                <span>相关网站：</span>
             </div>
             <div className='flex-1 space-x-2'>
                 <a
