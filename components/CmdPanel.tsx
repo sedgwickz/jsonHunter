@@ -1,22 +1,22 @@
 import React from 'react'
 
-const CurlPanel = ({
-    url,
-    selectors,
-    curlCmd
-}: {
+interface Props {
     url: string
     selectors: string
-    curlCmd: string
-}) => {
+    cmd: string
+}
+
+const CmdPanel = ({ url, selectors, cmd }: Props) => {
     return (
         <div>
-            {curlCmd && (
+            {cmd && (
                 <div className='flex rounded text-white border-2 border-solid border-brew-primary relative'>
-                    <figure>{curlCmd}</figure>
+                    <figure>
+                        <pre>{cmd}</pre>
+                    </figure>
                     <button
                         onClick={() => {
-                            navigator.clipboard.writeText(curlCmd)
+                            navigator.clipboard.writeText(cmd)
                         }}
                         className='absolute top-0 right-0 p-2 bg-transparent block w-auto'
                         title='复制'
@@ -39,4 +39,4 @@ const CurlPanel = ({
     )
 }
 
-export default CurlPanel
+export default CmdPanel

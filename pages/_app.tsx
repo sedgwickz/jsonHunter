@@ -1,6 +1,17 @@
+import { useEffect, useState } from 'react'
 import Logo from '../components/Logo'
+import { initGA, logPageView } from '../lib/analytics'
 import '../styles/globals.css'
+
 function MyApp({ Component, pageProps }: { Component: any; pageProps: {} }) {
+    const [hasInitialized, setHasInitialized] = useState(false)
+    useEffect(() => {
+        if (!hasInitialized) {
+            initGA()
+            setHasInitialized(true)
+        }
+        logPageView()
+    })
     return (
         <div className='flex p-4 flex-col container mx-auto h-screen'>
             <div className='fixed top-0 right-0 z-999 w-32'>

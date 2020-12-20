@@ -1,28 +1,47 @@
 import { useEffect, useState } from 'react'
-import CurlPanel from '../components/CurlPanel'
+import CmdPanel from '../components/CmdPanel'
 import Footer from '../components/Footer'
 import Intro from '../components/Intro'
 import LeftPanel from '../components/LeftPanel'
 import RightPanel from '../components/RightPanel'
-
+import { WORKER_URL } from '../lib/constant'
 function Home() {
     const [url, setUrl] = useState('')
     const [selectors, setSelectors] = useState('')
     const [result, setResult] = useState('')
-    const [curlCmd, setCurlCmd] = useState('')
+    const [cmd, setCmd] = useState('')
     useEffect(() => {
         setUrl(localStorage.getItem('url') || '')
         setSelectors(localStorage.getItem('selectors') || '')
     }, [])
 
-    const handleCurl = () => {
-        setCurlCmd(
-            `curl -X POST https://jsonhunter.nuk.workers.dev -H "Accept: application/json" -d '${JSON.stringify(
+    const convert2Curl = () => {
+        setCmd(
+            `curl -X POST ${WORKER_URL} -H "Accept: application/json" -d '${JSON.stringify(
                 {
                     url,
                     selectors: selectors.replace(/\n/g, '').replace(/  /g, '')
                 }
             )}'`
+        )
+    }
+
+    const convert2Fetch = () => {
+        setCmd(
+            `
+fetch("${WORKER_URL}", {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: '${JSON.stringify({
+        url,
+        selectors: selectors.replace(/\n/g, '').replace(/  /g, '')
+    })}'
+})
+.then(r => r.json())
+.then(data => console.log(data))
+            `
         )
     }
 
@@ -37,7 +56,8 @@ function Home() {
                             selectors,
                             setSelectors,
                             setResult,
-                            handleCurl
+                            convert2Curl,
+                            convert2Fetch
                         }}
                     />
                 </div>
@@ -45,7 +65,7 @@ function Home() {
                     <RightPanel {...{ url, result }} />
                 </div>
             </div>
-            <CurlPanel {...{ url, selectors, curlCmd }} />
+            <CmdPanel {...{ url, selectors, cmd }} />
             <Intro />
             <Footer />
         </div>

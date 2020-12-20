@@ -1,11 +1,12 @@
 import { NextApiRequest, NextApiResponse } from 'next'
+import { WORKER_URL } from './../../lib/constant'
 
 export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse
 ) {
     try {
-        const url = `https://jsonhunter.nuk.workers.dev`
+        const url = WORKER_URL
         const resp = await fetch(url, {
             method: 'POST',
             headers: {
