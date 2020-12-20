@@ -24,7 +24,7 @@ const Logo = () => {
                 </a>
             </Link>
             <div>在线爬虫</div>
-            <div>Make JSON Scrape Simpler</div>
+            <div>JSON Placeholder Alternative</div>
             <div className='mt-2 space-x-2'>
                 <a
                     target='_blank'
