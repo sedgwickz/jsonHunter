@@ -20,7 +20,7 @@ function Home() {
             `curl -X POST ${WORKER_URL} -H "Accept: application/json" -d '${JSON.stringify(
                 {
                     url,
-                    selectors: selectors.replace(/\n/g, '').replace(/  /g, '')
+                    selectors: JSON.parse(selectors)
                 }
             )}'`
         )
@@ -36,7 +36,7 @@ fetch("${WORKER_URL}", {
     },
     body: '${JSON.stringify({
         url,
-        selectors: selectors.replace(/\n/g, '').replace(/  /g, '')
+        selectors: JSON.parse(selectors)
     })}'
 })
 .then(r => r.json())

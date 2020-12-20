@@ -43,6 +43,9 @@ const LeftPanel = ({
             if (selectors && url && !!JSON.parse(selectors)) {
                 setErrMsg('')
                 setResult('loading...')
+                console.log(
+                    JSON.stringify({ url, selectors: JSON.parse(selectors) })
+                )
                 fetch('/api/cf-worker', {
                     method: 'POST',
                     headers: {
@@ -50,9 +53,7 @@ const LeftPanel = ({
                     },
                     body: JSON.stringify({
                         url,
-                        selectors: selectors
-                            .replace(/\n/g, '')
-                            .replace(/  /g, '')
+                        selectors: JSON.parse(selectors)
                     })
                 })
                     .then((r) => r.json())
