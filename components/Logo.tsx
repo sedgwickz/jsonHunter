@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import React from 'react'
 const Logo = () => {
     return (
         <div className='text-center text-brew-primary mb-4'>
@@ -25,7 +24,7 @@ const Logo = () => {
             </Link>
             <div>在线爬虫</div>
             <div>JSON Placeholder Alternative</div>
-            <div className='mt-2 space-x-2'>
+            <div className='flex justify-center mt-2 space-x-2'>
                 <a
                     target='_blank'
                     rel='nofollow'
@@ -49,13 +48,17 @@ const Logo = () => {
                     ></i>
                     <span>Tweet</span>
                 </a>
-                <a
-                    target='_blank'
-                    className='underline text-xs text-white'
-                    href='https://github.com/sedgwickz/jsonHunter'
-                >
-                    🧡star repo支持开发者
-                </a>
+                <div
+                    dangerouslySetInnerHTML={{
+                        __html: `<iframe src='https://ghbtns.com/github-btn.html?user=sedgwickz&repo=jsonHunter&type=star&count=true'
+                                frameborder='0'
+                                scrolling='0'
+                                width='100'
+                                height='20'
+                                title='GitHub'
+                            ></iframe>`
+                    }}
+                ></div>
             </div>
         </div>
     )
