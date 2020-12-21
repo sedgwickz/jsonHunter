@@ -1,14 +1,10 @@
-![JSONHunter](public/assets/logo1.png)
-
 ## 介绍
 
 JSONHunter 可以帮助你快速获取某网站指定元素，实现类似爬虫或者获取 JSON PlaceHolder 效果。
 
-[在线网站](https://jsonhunter.vercel.app/)
-
 ## 演示
 
-![](public/assets/demo.gif)
+![](assets/demo.gif)
 
 ## 使用说明
 
@@ -98,7 +94,3 @@ E > F  E元素的F元素子元素
 | name   | string | required |
 | alias  | string | optional |
 | attrs  | array  | optional |
-
-## License
-
-[MIT](/LICENSE)

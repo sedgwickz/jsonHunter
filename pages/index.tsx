@@ -1,3 +1,5 @@
+import fs from 'fs'
+import { GetStaticProps } from 'next'
 import { useEffect, useState } from 'react'
 import CmdPanel from '../components/CmdPanel'
 import Footer from '../components/Footer'
@@ -5,7 +7,12 @@ import Intro from '../components/Intro'
 import LeftPanel from '../components/LeftPanel'
 import RightPanel from '../components/RightPanel'
 import { WORKER_URL } from '../lib/constant'
-function Home() {
+
+interface Props {
+    docs: string
+}
+
+function Home({ docs }: Props) {
     const [url, setUrl] = useState('')
     const [selectors, setSelectors] = useState('')
     const [result, setResult] = useState('')
@@ -66,10 +73,17 @@ fetch("${WORKER_URL}", {
                 </div>
             </div>
             <CmdPanel {...{ url, selectors, cmd }} />
-            <Intro />
+            <Intro {...{ docs }} />
             <Footer />
         </div>
     )
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+    const docs = fs.readFileSync('docs/usage.md', 'utf-8')
+    return {
+        props: { docs }
+    }
 }
 
 export default Home

@@ -8,8 +8,19 @@
         @apply font-mono bg-brew-default h-full w-full;
     }
 
+    h1 {
+        @apply text-2xl;
+    }
+    h2 {
+        @apply text-xl;
+    }
+
+    hr {
+        @apply border-t border-brew-border border-solid;
+    }
+
     a {
-        @apply inline-block;
+        @apply inline-block text-white;
     }
 
     button {
@@ -30,5 +41,17 @@
 
     pre {
         @apply break-words whitespace-pre-wrap;
+    }
+
+    code {
+        @apply w-full bg-brew-code block rounded-md p-4;
+    }
+
+    thead {
+        @apply border-b border-solid border-brew-primary p-2 border-opacity-5;
+    }
+
+    td {
+        @apply w-40 text-center p-4 border-b border-solid border-brew-primary border-opacity-5;
     }
 }

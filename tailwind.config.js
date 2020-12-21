@@ -13,7 +13,8 @@ module.exports = {
             colors: {
                 'brew-default': '#2e2a24',
                 'brew-primary': '#f9d094',
-                'brew-code': 'rgba(0, 0, 0, 0.3)'
+                'brew-code': 'rgba(0, 0, 0, 0.3)',
+                'brew-border': 'rgba(255, 255, 255, 0.08)'
             },
             height: {
                 '(screen-40)': 'calc(100vh - 16rem)'

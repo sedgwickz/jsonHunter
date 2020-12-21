@@ -34,14 +34,14 @@ const Footer = () => {
                 >
                     🚀JSON校验
                 </a>
-                <a
+                {/* <a
                     target='_blank'
                     className='underline'
                     rel='nofollow'
                     href='https://mdxjs.com/'
                 >
                     🛠MDX文档
-                </a>
+                </a> */}
                 <a
                     target='_blank'
                     className='underline'

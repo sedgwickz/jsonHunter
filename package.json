@@ -16,6 +16,9 @@
         "react": "17.0.1",
         "react-dom": "17.0.1",
         "react-ga": "^3.3.0",
+        "react-icons": "^4.1.0",
+        "react-markdown": "^5.0.3",
+        "remark-gfm": "^1.0.0",
         "tailwindcss": "^2.0.2",
         "unfetch": "^4.2.0"
     },

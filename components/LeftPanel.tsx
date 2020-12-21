@@ -111,9 +111,6 @@ const LeftPanel = ({
                     {/* <button onClick={convert2Fetch}>转化fetch命令</button> */}
                 </div>
                 <div className='space-x-2'>
-                    <a className='underline text-xs text-white' href='#intro'>
-                        使用说明
-                    </a>
                     <a
                         className='underline text-xs text-white'
                         target='_blank'
