@@ -8,7 +8,24 @@ JSONHunter 可以帮助你快速获取某网站指定元素，实现类似爬虫
 
 ## 使用说明
 
-事例 1：获取 v2ex 首页贴子标题
+example1: 获取sedgmentfault帖子
+
+```
+url: https://segmentfault.com/
+
+[
+  {
+    "name": ".q-item-title .text-body",
+    "alias": "title",
+    "attrs": [
+      "href"
+    ]
+  }
+]
+
+```
+
+example2：获取 v2ex 首页贴子标题
 
 请求 URL
 
@@ -27,7 +44,7 @@ https://v2ex.com/?tab=all
 ]
 ```
 
-事例 2: 获取 v2ex 首页贴子标题及链接，发帖人及链接，以及发表时间
+example3: 获取 v2ex 首页贴子标题及链接，发帖人及链接，以及发表时间
 
 请求 URL
 
