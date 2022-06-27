@@ -6,7 +6,7 @@ interface Props {
 const RightPanel = ({ result, url }: Props) => {
     return (
         <>
-            <figure className='min-h-100px mt-4 md:mt-0 flex-auto p-2 rounded text-white border-2 border-solid border-brew-primary overflow-scroll'>
+            <figure className='min-h-100px mt-4 md:mt-0 flex-auto p-2 rounded text-white border-2 border-solid border-brew-primary overflow-scroll max-h:h-(screen-40)'>
                 <pre>{result}</pre>
             </figure>
             <div className='flex justify-end space-x-2'>

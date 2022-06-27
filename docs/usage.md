@@ -8,7 +8,7 @@ JSONHunter 可以帮助你快速获取某网站指定元素，实现类似爬虫
 
 ## 使用说明
 
-example1: 获取sedgmentfault帖子
+example1: 获取segmentfault帖子
 
 ```
 url: https://segmentfault.com/
