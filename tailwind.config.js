@@ -2,13 +2,6 @@ module.exports = {
     purge: ['./pages/**/*.tsx', './components/**/*.tsx'],
     darkMode: false, // or 'media' or 'class'
     theme: {
-        // minHeight: {
-        //     0: '0',
-        //     '1/4': '25%',
-        //     '1/2': '50%',
-        //     '3/4': '75%',
-        //     full: '100%'
-        // },
         extend: {
             colors: {
                 'brew-default': '#2e2a24',
@@ -17,7 +10,7 @@ module.exports = {
                 'brew-border': 'rgba(255, 255, 255, 0.08)'
             },
             height: {
-                '(screen-40)': 'calc(100vh - 16rem)'
+                '(screen-40)': 'calc(100vh - 20rem)'
             },
             maxHeight: {
                 '(screen-40)': 'calc(100vh - 40rem)'

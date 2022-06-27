@@ -54,8 +54,8 @@ fetch("${WORKER_URL}", {
 
     return (
         <div className='flex flex-col max-h-full py-2 space-y-4'>
-            <div className='md:flex space-x-2 md:h-(screen-40)'>
-                <div className='flex flex-col md:w-1/2 space-y-3'>
+            <div className='md:flex space-x-2'>
+                <div className='flex flex-col md:w-1/2 space-y-3 md:h-(screen-40)'>
                     <LeftPanel
                         {...{
                             url,
