@@ -1,8 +1,13 @@
 import React, { Dispatch, SetStateAction, useRef, useState } from 'react'
-const preDefinedStruct = `Demo JSON: \n[{
-name: '.topic-link',
-attrs: ['href']
-}]
+const preDefinedStruct = `[
+    {
+      "name": ".q-item-title .text-body",
+      "alias": "title",
+      "attrs": [
+        "href"
+      ]
+    }
+]
 `
 
 interface Props {
